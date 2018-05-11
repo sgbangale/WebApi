@@ -37,7 +37,9 @@
 11. ng g m prime [for prime module]
 12. include all prime module [import and export]
 
-13.git commit
-	git remote add origin https://github.com/user/repo.git
+13.git commit [https://github.com/sgbangale/AngularApp]
+	git remote add origin https://github.com/sgbangale/AngularApp.git
 	git remote -v
 	git push -u origin master [push changes on remote]
+
+14.Added WebApi to git [https://github.com/sgbangale/WebApi]
