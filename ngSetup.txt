@@ -1,0 +1,43 @@
+
+1.npm install -g @angular/cli@1.7.4
+2.ng set --global packageManager=yarn
+3.ng new AngularApp --verbose --skip-tests --skip-install  --routing --minimal
+4.change defaults section component in .angular-cli.json
+			"inlineStyle": false,
+			"inlineTemplate": false,
+5.yarn
+6.yarn add ng-swagger-gen -D  [https://www.npmjs.com/package/ng-swagger-gen]
+7.create ng-swagger-gen.json by using [ng-swagger-gen --gen-config [-i path_to_swagger_json] [-o output_dir]]
+						{
+					  "$schema": "./node_modules/ng-swagger-gen/ng-swagger-gen-schema.json",
+					  "swagger": "http://localhost:8989/swagger/docs/v1",
+					  "output": "src/app/api",
+					  "config": "ng-swagger-gen.json",
+					  "ignoreUnusedModels": true,
+					  "minParamsForContainer": 2,
+					  "defaultTag": "Api",
+					  "removeStaleFiles": true,
+					  "modelIndex": true,
+					  "serviceIndex": true,
+					  "apiModule": true,
+					  "enumModule": true
+					}
+8.add custom script to package.json 
+			"api" : "ng-swagger-gen"
+
+
+9. yarn add primeng  --save [https://www.primefaces.org/primeng/#/setup]
+10.yarn add font-awesome  --save [https://www.primefaces.org/primeng/#/setup]
+			"styles": [
+				"../node_modules/font-awesome/css/font-awesome.min.css",
+				"../node_modules/primeng/resources/themes/omega/theme.css",
+				"../node_modules/primeng/resources/primeng.min.css",
+				"styles.css"
+			  ],
+11. ng g m prime [for prime module]
+12. include all prime module [import and export]
+
+13.git commit
+	git remote add origin https://github.com/user/repo.git
+	git remote -v
+	git push -u origin master [push changes on remote]
